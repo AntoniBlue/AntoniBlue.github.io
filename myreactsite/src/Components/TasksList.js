@@ -3,7 +3,7 @@ import TaskItem from './TaskItem';
 
 class TaskList extends React.Component {
     constructor(prop) {
-        super(props)
+        super()
 
         this.state = {
             tasks: [
