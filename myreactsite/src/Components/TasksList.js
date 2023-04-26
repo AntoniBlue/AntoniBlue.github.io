@@ -12,8 +12,7 @@ class TaskList extends React.Component {
                 'Task 3',
             ],
             filter: 'all',
-
-
+            newTask: '',
         }
     }
 
@@ -36,7 +35,7 @@ class TaskList extends React.Component {
                         id="new-task"
                         name="newTask"
                         value={this.state.newTask}
-                        onChange={this.newTaskChangeHandler}
+                        onChange={this.newTaskChangeHandler.bind(this)}
                     />
 
                     <input type="submit" value="Add" />
