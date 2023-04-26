@@ -6,9 +6,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-
-        </header>
+        <main className="App-header">
+          <ul>
+            <li> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </main>
       </div>
     );
   }
