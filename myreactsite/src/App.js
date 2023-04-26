@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TaskList from './Components/TasksList';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <main className="App-header">
-          <ul>
-            <li> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          </ul>
+          <h1>To do list</h1>
+          <TaskList/>
         </main>
       </div>
     );
