@@ -14,11 +14,20 @@ class TaskList extends React.Component {
             filter: 'all',
             newTask: '',
         }
+
+
     }
 
     newTaskChangeHandler(e) {
-        console.log(e.target.value);
         this.setState({ newTask: e.target.value })
+    }
+
+    addNewTaskHandler(e) {
+        e.preventDefault();
+        this.setState((state, props) => ({
+            tasks: [...state.tasks, state.newTask],
+            newTask: '',
+        }))
     }
 
     render() {
@@ -28,7 +37,7 @@ class TaskList extends React.Component {
                     {this.state.tasks.map(x => <TaskItem key={x} title={x} />)}
                 </ul>
 
-                <form action="">
+                <form onSubmit={this.addNewTaskHandler.bind(this)}>
                     <label htmlFor="new-task"></label>
                     <input
                         type="text"
